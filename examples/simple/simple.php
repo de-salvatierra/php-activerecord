@@ -6,7 +6,7 @@ require_once __DIR__ . '/../../ActiveRecord.php';
 class Book extends ActiveRecord\Model { }
 
 // initialize ActiveRecord
-// change the connection settings to whatever is appropriate for your mysql server 
+// change the connection settings to whatever is appropriate for your mysql server
 ActiveRecord\Config::initialize(function($cfg)
 {
     $cfg->set_model_directory('.');
@@ -14,4 +14,3 @@ ActiveRecord\Config::initialize(function($cfg)
 });
 
 print_r(Book::first()->attributes());
-?>

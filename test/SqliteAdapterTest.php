@@ -8,16 +8,16 @@ class SqliteAdapterTest extends AdapterTest
 		parent::set_up('sqlite');
 	}
 
-	public function tearDown()
-	{
+	public function tearDown(): void
+    {
 		parent::tearDown();
 
 		@unlink(self::InvalidDb);
 	}
 
 
-	public static function tearDownAfterClass()
-	{
+	public static function tearDownAfterClass(): void
+    {
 		parent::tearDownAfterClass();
 
 		@unlink(static::$db);
@@ -76,7 +76,8 @@ class SqliteAdapterTest extends AdapterTest
 		$this->assert_equals($datetime,$this->conn->date_to_string(date_create($datetime)));
 	}
 
-	// not supported
+    /**
+     * @doesNotPerformAssertions
+     */
 	public function test_connect_with_port() {}
 }
-?>

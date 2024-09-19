@@ -125,10 +125,10 @@ class Config extends Singleton
 	 *     'development' => 'mysql://username:password@127.0.0.1/database_name'));
 	 * </code>
 	 *
-	 * @param array $connections Array of connections
+	 * @param mixed $connections Array of connections
 	 * @param string $default_connection Optionally specify the default_connection
 	 * @return void
-	 * @throws ActiveRecord\ConfigException
+	 * @throws ConfigException
 	 */
 	public function set_connections($connections, $default_connection=null)
 	{
